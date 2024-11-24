@@ -29,7 +29,7 @@ class AIContentGenerator:
         
         try:
             completion = self.client.chat.completions.create(
-                model="mixtral-8x7b-32768",
+                model="llama-3.1-70b-versatile",
                 messages=[
                     {"role": "system", "content": "You are a professional content writer."},
                     {"role": "user", "content": prompt}
