@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComposAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="{{ url_for('static', filename='images/composai.png') }}" alt="ComposAI Logo" class="navbar-logo">
+        </div>
+        <div class="navbar-right">
+            <a href="#signup" class="navbar-link">Signup</a>
+            <a href="#settings" class="navbar-link">Settings</a>
+            <a href="#history" class="navbar-link">History</a>
+            <a href="#other" class="navbar-link">Other</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% include 'components/sidebar.html' %}
+        <div class="main-content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

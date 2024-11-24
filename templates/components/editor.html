@@ -1,0 +1,42 @@
+<div class="editor-section">
+    <h2>Content Generator</h2>
+    <div class="input-group">
+        <input type="text" id="topic" placeholder="Enter your topic or title">
+    </div>
+    <div class="input-group">
+        <label>Keywords</label>
+        <input type="text" id="keywords" placeholder="Enter keywords separated by commas">
+    </div>
+    <div class="input-group">
+        <label>Tone</label>
+        <select id="tone">
+            <option value="Professional">Professional</option>
+            <option value="Casual">Casual</option>
+            <option value="Friendly">Friendly</option>
+            <option value="Formal">Formal</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <label>Length</label>
+        <select id="length">
+            <option value="300">Short (300 words)</option>
+            <option value="600">Medium (600 words)</option>
+            <option value="1000">Long (1000 words)</option>
+        </select>
+    </div>
+    <button id="generate-btn" class="generate-btn">Generate Content</button>
+    
+    <div class="output-section">
+        <div class="output-header">
+            <h3>Generated Content</h3>
+            <div class="output-actions">
+                <button class="action-btn" id="copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                <button class="action-btn" id="download-btn"><i class="fas fa-download"></i> Download</button>
+                <button class="action-btn" id="regenerate-btn"><i class="fas fa-redo"></i> Regenerate</button>
+            </div>
+        </div>
+        <div id="editor" class="editor" contenteditable="true">
+            Your generated content will appear here...
+        </div>
+    </div>
+</div>
