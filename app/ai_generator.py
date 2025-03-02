@@ -29,14 +29,16 @@ class AIContentGenerator:
         
         try:
             completion = self.client.chat.completions.create(
-                model="llama-3.2-1b-preview",
+                model="llama-3.3-70b-versatile",
                 messages=[
                     {"role": "system", "content": "You are a professional content writer."},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.7,
-                max_tokens=4000,
-                top_p=0.9
+                temperature=1,
+                max_completion_tokens=1024,
+                top_p=1,
+                stream=True,
+                stop=None,
             )
             
             return completion.choices[0].message.content
