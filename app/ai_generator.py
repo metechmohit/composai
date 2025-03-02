@@ -35,7 +35,7 @@ class AIContentGenerator:
                     {"role": "user", "content": prompt}
                 ],
                 temperature=1,
-                max_completion_tokens=1024,
+                max_tokens=1024,
                 top_p=1,
                 stream=True,
                 stop=None,
